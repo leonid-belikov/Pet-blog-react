@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import logo from './logo.svg'
 import { Counter } from './features/counter/Counter'
 import './App.css'
+import axios from './axios'
 
 function App() {
+
+  useEffect(() => {
+    axios('article')
+      .then(response => { console.log(response.data) })
+  }, [])
+
   return (
     <div className="App">
       <header className="App-header">

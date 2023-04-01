@@ -3,5 +3,5 @@ import { Router, Request, Response } from 'express'
 export const articleRoute = Router()
 
 articleRoute.get('/', (req: Request, res: Response) => {
-    res.send('GET articles')
+    res.send({ msg: 'Yoyoyo' })
 })
