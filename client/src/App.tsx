@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from './logo.svg'
 import { Counter } from './features/counter/Counter'
 import './App.css'
@@ -6,14 +6,17 @@ import axios from './axios'
 
 function App() {
 
+  const [msg, setMsg] = useState<string>('')
+
   useEffect(() => {
     axios('article')
-      .then(response => { console.log(response.data) })
+      .then(response => { setMsg(response.data.msg) })
   }, [])
 
   return (
     <div className="App">
       <header className="App-header">
+        { msg }
         <img src={logo} className="App-logo" alt="logo"/>
         <Counter/>
         <p>
