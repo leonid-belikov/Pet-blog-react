@@ -1,67 +1,62 @@
-import React, { useEffect, useState } from 'react'
-import logo from './logo.svg'
-import { Counter } from './features/counter/Counter'
+import React from 'react'
+import { Link, Route, Routes } from 'react-router-dom'
 import './App.css'
-import axios from './axios'
-import { AxiosResponse } from 'axios'
+import MainPage from './pages/MainPage'
+import AboutPage from './pages/AboutPage'
+import ErrorPage from './pages/ErrorPage'
+import Users from './users/Users'
+import UserDetailsPage from './pages/UserDetailsPage'
 
+/*
 function App() {
 
-  const [msg, setMsg] = useState<string>('')
+  const [data, setData] = useState<{} | null>(null)
+  const [toggle, setToggle] = useState<boolean>(false)
+  const [value, setValue] = useState<string>('')
+
+  const onClick = () => {
+    setToggle(prev => !prev)
+  }
+
+  const onInput = event => {
+    const _value = event.target.value
+    setValue(_value)
+  }
 
   useEffect(() => {
-    axios('article')
-      .then((response: AxiosResponse<{msg: string}>) => { setMsg(response.data.msg) })
+    const timer = setTimeout(() => {
+      setData({})
+    }, 100)
+    return () => {
+      clearTimeout(timer)
+    }
   }, [])
 
   return (
-    <div className="App">
-      <header className="App-header">
-        { msg }
-        <img src={logo} className="App-logo" alt="logo"/>
-        <Counter/>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="src/App"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="src/App"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="src/App"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="src/App"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+    <div>
+      <h1 data-testid='value-elem'>{ value }</h1>
+      { toggle && <div data-testid='toggle-elem'>toggle</div> }
+      { data && <div className='color-red'>data</div> }
+      <button data-testid='toggle-btn' onClick={ onClick }>click me</button>
+      <input type="text" placeholder="input value..." value={ value } onInput={ onInput }/>
+    </div>
+  )
+}
+*/
+
+function App() {
+  return (
+    <div>
+      <Link to="/" data-testid="main-link">main</Link>
+      <Link to="/about" data-testid="about-link">about</Link>
+      <Link to="/users" data-testid="users-link">users</Link>
+      <Routes>
+        <Route path='/' element={<MainPage/>}/>
+        <Route path='/about' element={<AboutPage/>}/>
+        <Route path='/users' element={<Users/>}/>
+        <Route path='/users/:id' element={<UserDetailsPage/>}/>
+        <Route path='/*' element={<ErrorPage/>}/>
+      </Routes>
     </div>
   )
 }
