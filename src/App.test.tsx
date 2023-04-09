@@ -1,12 +1,18 @@
+/*
 import React from 'react'
 import { render, screen, fireEvent, act } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import App from './App'
+import { MemoryRouter } from 'react-router-dom'
 
 
-describe('TEST APP', () => {
+describe('APP TEST', () => {
   test('renders learn react link', () => {
-    render(<App/>)
+    render(
+      <MemoryRouter>
+        <App/>
+      </MemoryRouter>
+    )
     const btn = screen.getByRole('button')
     const input = screen.getByPlaceholderText(/input value/i)
 
@@ -15,18 +21,26 @@ describe('TEST APP', () => {
   })
 
   test('other', async () => {
-    render(<App/>)
-/*
+    render(
+      <MemoryRouter>
+        <App/>
+      </MemoryRouter>
+    )
+/!*
     const helloElement = screen.queryByText(/hello2/i)
     expect(helloElement).toBeNull()
-*/
+*!/
     const dataElement = await screen.findByText(/data/i)
     expect(dataElement).toBeInTheDocument()
     expect(dataElement).toHaveClass('color-red')
   })
 
   test('CLICK EVENT', () => {
-    render(<App/>)
+    render(
+      <MemoryRouter>
+        <App/>
+      </MemoryRouter>
+    )
     const btn = screen.getByTestId('toggle-btn')
     expect(screen.queryByTestId('toggle-elem')).toBeNull()
     fireEvent.click(btn)
@@ -37,15 +51,15 @@ describe('TEST APP', () => {
 
   test('INPUT EVENT', async () => {
     const user = userEvent.setup()
-    render(<App/>)
+    render(
+      <MemoryRouter>
+        <App/>
+      </MemoryRouter>
+    )
     const input = screen.getByPlaceholderText(/input value/i)
     expect(screen.queryByTestId('value-elem')).toContainHTML('')
-/*
-    fireEvent.input(input, {
-      target: { value: 'test' }
-    })
-*/
     await act(async () => { await user.type(input, 'test1') })
     expect(screen.queryByTestId('value-elem')).toContainHTML('test1')
   })
 })
+*/

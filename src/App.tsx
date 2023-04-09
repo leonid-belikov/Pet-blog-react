@@ -1,11 +1,7 @@
 import React from 'react'
-import { Link, Route, Routes } from 'react-router-dom'
 import './App.css'
-import MainPage from './pages/MainPage'
-import AboutPage from './pages/AboutPage'
-import ErrorPage from './pages/ErrorPage'
-import Users from './users/Users'
-import UserDetailsPage from './pages/UserDetailsPage'
+import AppRouter from './router/AppRouter'
+import Navbar from './components/Navbar/Navbar'
 
 /*
 function App() {
@@ -47,16 +43,8 @@ function App() {
 function App() {
   return (
     <div>
-      <Link to="/" data-testid="main-link">main</Link>
-      <Link to="/about" data-testid="about-link">about</Link>
-      <Link to="/users" data-testid="users-link">users</Link>
-      <Routes>
-        <Route path='/' element={<MainPage/>}/>
-        <Route path='/about' element={<AboutPage/>}/>
-        <Route path='/users' element={<Users/>}/>
-        <Route path='/users/:id' element={<UserDetailsPage/>}/>
-        <Route path='/*' element={<ErrorPage/>}/>
-      </Routes>
+      <Navbar/>
+      <AppRouter/>
     </div>
   )
 }
