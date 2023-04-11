@@ -22,6 +22,7 @@ function Users() {
 
   return (
     <div data-testid="users-page">
+      Users page
       {users.map(user => (
         <Link
           to={`/users/${user.id}`}

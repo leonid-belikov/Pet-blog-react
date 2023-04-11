@@ -6,7 +6,7 @@ import Users from '../users/Users'
 import UserDetailsPage from '../pages/UserDetailsPage'
 import ErrorPage from '../pages/ErrorPage'
 
-function AppRouter() {
+function RouterView() {
   return (
     <Routes>
       <Route path="/" element={<MainPage/>}/>
@@ -18,4 +18,4 @@ function AppRouter() {
   )
 }
 
-export default AppRouter
+export default RouterView

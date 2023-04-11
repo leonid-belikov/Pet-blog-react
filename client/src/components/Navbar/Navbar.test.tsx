@@ -5,13 +5,9 @@ import Navbar from './Navbar'
 import { renderWithRouter } from '../../tests/helpers/renderWithRouter'
 
 describe('NAVBAR TEST', () => {
-  let user
-
-  beforeEach(() => {
-    user = userEvent.setup()
-  })
 
   test('test about link', async () => {
+    const user = userEvent.setup()
     renderWithRouter({ component: <Navbar/> })
     const aboutLink = screen.getByTestId('about-link')
     await act(async () => { await user.click(aboutLink)})
@@ -19,6 +15,7 @@ describe('NAVBAR TEST', () => {
   })
 
   test('test users link', async () => {
+    const user = userEvent.setup()
     renderWithRouter({ component: <Navbar/> })
     const usersLink = screen.getByTestId('users-link')
     await act(async () => { await user.click(usersLink)})
@@ -26,6 +23,7 @@ describe('NAVBAR TEST', () => {
   })
 
   test('test main link', async () => {
+    const user = userEvent.setup()
     renderWithRouter({ component: <Navbar/>, route: '/about' })
     const mainLink = screen.getByTestId('main-link')
     await act(async () => { await user.click(mainLink)})

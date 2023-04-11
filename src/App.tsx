@@ -1,7 +1,8 @@
 import React from 'react'
 import './App.css'
-import AppRouter from './router/AppRouter'
+import RouterView from './router/RouterView'
 import Navbar from './components/Navbar/Navbar'
+import { Counter } from './features/counter/Counter'
 
 /*
 function App() {
@@ -44,7 +45,8 @@ function App() {
   return (
     <div>
       <Navbar/>
-      <AppRouter/>
+      <Counter/>
+      <RouterView/>
     </div>
   )
 }

@@ -1,11 +1,16 @@
-/*
 import React from 'react'
-import { render, screen, fireEvent, act } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
-import App from './App'
-import { MemoryRouter } from 'react-router-dom'
+import { screen } from '@testing-library/react'
+import { renderWithRouter } from './tests/helpers/renderWithRouter'
 
 
+describe('APP TEST', () => {
+  test('renders main page', () => {
+    renderWithRouter()
+    expect(screen.getByTestId('main-page')).toBeInTheDocument()
+  })
+})
+
+/*
 describe('APP TEST', () => {
   test('renders learn react link', () => {
     render(

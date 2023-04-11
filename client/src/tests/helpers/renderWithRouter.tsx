@@ -1,5 +1,5 @@
 import { MemoryRouter } from 'react-router-dom'
-import AppRouter from '../../router/AppRouter'
+import RouterView from '../../router/RouterView'
 import { render } from '@testing-library/react'
 
 type Data = {
@@ -7,13 +7,13 @@ type Data = {
   route?: string
 }
 
-export const renderWithRouter = (data: Data = {}): void => {
+export const renderWithRouter = (data: Data = {}) => {
   const initialRoute = data?.route ?? '/'
   const content = data?.component ?? null
 
-  render(
+  return render(
     <MemoryRouter initialEntries={[initialRoute]}>
-      <AppRouter/>
+      <RouterView/>
       { content }
     </MemoryRouter>
   )
