@@ -14,7 +14,7 @@ type Data = {
   route?: string
 }
 
-export const renderTestApp = (component?: JSX.Element, options?: Data = {}) => {
+export const renderTestApp = (component?: JSX.Element, options: Data = {}) => {
   const store = setupStore(options.store)
   const initialRoute = options?.route ?? '/'
   const content = component ?? null
