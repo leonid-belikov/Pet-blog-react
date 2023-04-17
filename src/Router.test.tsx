@@ -2,12 +2,13 @@ import { act, screen } from '@testing-library/react'
 import React from 'react'
 import userEvent from '@testing-library/user-event'
 import { renderWithRouter } from './tests/helpers/renderWithRouter'
+import Navbar from './components/Navbar/Navbar'
 
 describe('ROUTER TEST', () => {
 
   test('Router test', async () => {
     const user = userEvent.setup()
-    renderWithRouter()
+    renderWithRouter({ component: <Navbar/> })
     const mainLink = screen.getByTestId('main-link')
     const aboutLink = screen.getByTestId('about-link')
     await act(async () => { await user.click(aboutLink) })

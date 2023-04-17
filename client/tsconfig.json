@@ -18,8 +18,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "types": ["node", "@wdio/globals/types", "@wdio/mocha-framework"]
+    "jsx": "react-jsx"
   },
   "include": [
     "src"
