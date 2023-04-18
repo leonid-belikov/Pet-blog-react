@@ -6,6 +6,7 @@ import Users from '../users/Users'
 import UserDetailsPage from '../pages/UserDetailsPage'
 import ErrorPage from '../pages/ErrorPage'
 import HelloWorld from '../pages/HelloWorld'
+import UsersForTest from '../usersForTest/UsersForTest'
 
 function RouterView() {
   return (
@@ -14,6 +15,7 @@ function RouterView() {
       <Route path="/hello" element={<HelloWorld/>}/>
       <Route path="/about" element={<AboutPage/>}/>
       <Route path="/users" element={<Users/>}/>
+      <Route path="/users-test" element={<UsersForTest/>}/>
       <Route path="/users/:id" element={<UserDetailsPage/>}/>
       <Route path="/*" element={<ErrorPage/>}/>
     </Routes>

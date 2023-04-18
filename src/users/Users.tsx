@@ -2,17 +2,17 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-type User = {
+export type UserType = {
   id: number,
   name: string
 }
 
 function Users() {
 
-  const [users, setUsers] = useState<Array<User>>([])
+  const [users, setUsers] = useState<Array<UserType>>([])
 
   const loadUsers = async () => {
-    const resp = await axios.get('https://jsonplaceholder.typicode.com/users')
+    const resp = await axios('https://jsonplaceholder.typicode.com/users')
     setUsers(resp.data)
   }
 
