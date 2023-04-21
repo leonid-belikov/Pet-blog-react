@@ -3,6 +3,7 @@ import logo from './logo.svg'
 import { Counter } from './features/counter/Counter'
 import './App.css'
 import axios from './axios'
+import { AxiosResponse } from 'axios'
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
 
   useEffect(() => {
     axios('article')
-      .then(response => { setMsg(response.data.msg) })
+      .then((response: AxiosResponse<{msg: string}>) => { setMsg(response.data.msg) })
   }, [])
 
   return (
@@ -26,7 +27,7 @@ function App() {
           <span>Learn </span>
           <a
             className="App-link"
-            href="https://reactjs.org/"
+            href="src/App"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -35,7 +36,7 @@ function App() {
           <span>, </span>
           <a
             className="App-link"
-            href="https://redux.js.org/"
+            href="src/App"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -44,7 +45,7 @@ function App() {
           <span>, </span>
           <a
             className="App-link"
-            href="https://redux-toolkit.js.org/"
+            href="src/App"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -53,7 +54,7 @@ function App() {
           ,<span> and </span>
           <a
             className="App-link"
-            href="https://react-redux.js.org/"
+            href="src/App"
             target="_blank"
             rel="noopener noreferrer"
           >
