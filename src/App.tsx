@@ -14,10 +14,32 @@ function App() {
       .then((response: AxiosResponse<{msg: string}>) => { setMsg(response.data.msg) })
   }, [])
 
+  const handleFileInput = async (event: React.ChangeEvent<HTMLInputElement>): Promise<void> => {
+    event.preventDefault()
+    const file = event.target.files?.item(0)
+    if (file) {
+      console.log(file)
+      debugger
+      const image = await new Promise((resolve) => {
+        const reader = new FileReader()
+        reader.readAsDataURL(file)
+        reader.onloadend = () => {
+          resolve(reader.result?.toString() ?? '')
+        }
+      })
+      console.log(image)
+      debugger
+      const result = await axios.post(`https://api.imgbb.com/1/upload/?key=b07cf430e01f870db9a2d31bd2f2fce9&name=test`, { image })
+      console.log(result)
+      debugger
+    }
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         { msg }
+        <input type='file' onInput={handleFileInput}/>
         <img src={logo} className="App-logo" alt="logo"/>
         <Counter/>
         <p>
