@@ -10,7 +10,7 @@ function App() {
   const [msg, setMsg] = useState<string>('')
 
   useEffect(() => {
-    axios.post('article')
+    axios.post('article', { text: 'kukue*ta' })
       .then((response: AxiosResponse<{msg: string}>) => { setMsg(response.data.msg) })
   }, [])
 
