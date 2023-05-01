@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Pet-blog-react/static/css/main.f1283223.css",
-    "main.js": "/Pet-blog-react/static/js/main.8aa7886c.js",
+    "main.js": "/Pet-blog-react/static/js/main.d020b8b5.js",
     "index.html": "/Pet-blog-react/index.html",
     "main.f1283223.css.map": "/Pet-blog-react/static/css/main.f1283223.css.map",
-    "main.8aa7886c.js.map": "/Pet-blog-react/static/js/main.8aa7886c.js.map"
+    "main.d020b8b5.js.map": "/Pet-blog-react/static/js/main.d020b8b5.js.map"
   },
   "entrypoints": [
     "static/css/main.f1283223.css",
-    "static/js/main.8aa7886c.js"
+    "static/js/main.d020b8b5.js"
   ]
 }
