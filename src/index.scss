@@ -1,0 +1,29 @@
+@import 'src/common/style/variables';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+.btn {
+  padding: 5px 10px;
+  color: $dark-color;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid $dark-color;
+
+  &.confirm-btn {
+    color: $dark-color;
+    @include success-gradient-bg;
+  }
+
+  &.delete-btn {
+    color: $white-color;
+    @include danger-gradient-bg;
+  }
+}

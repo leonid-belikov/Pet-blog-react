@@ -1,0 +1,21 @@
+$bg-color:                #282f6f;
+$dark-color:              #525a9c;
+$light-color:             #e4e6ff;
+
+$black-color:             #000;
+$gray-color:              #bfc1d4;
+$white-color:             #fff;
+
+$success-primary-color:   #52ff0e;
+$success-secondary-color: #f6ff12;
+
+$danger-primary-color:    #a92a35;
+$danger-secondary-color:  #d81122;
+
+@mixin success-gradient-bg {
+  background: linear-gradient(45deg, $success-primary-color, $success-secondary-color);
+}
+
+@mixin danger-gradient-bg {
+  background: linear-gradient(45deg, $danger-primary-color, $danger-secondary-color);
+}
