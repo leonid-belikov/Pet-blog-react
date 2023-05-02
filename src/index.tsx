@@ -10,6 +10,7 @@ const container = document.getElementById('root')!
 const root = createRoot(container)
 
 const baseName = process.env.NODE_ENV === 'production' ? '/Pet-blog-react' : undefined
+console.log(process.env.NODE_ENV)
 
 root.render(
   <React.StrictMode>
