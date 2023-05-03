@@ -1,0 +1,41 @@
+.main-page {
+  position: relative;
+  height: 100%;
+
+  .main-page-logo {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .title {
+    opacity: 0;
+
+    &.name {
+      right: 32%;
+    }
+
+    &.surname {
+      left: 26%;
+    }
+  }
+
+  a {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    opacity: 0;
+
+    &.about-link {
+      left: 50%;
+      transform: translate(calc(-100% - 20vw), -50%);
+    }
+
+    &.demo-link {
+      right: 50%;
+      transform: translate(calc(100% + 20vw), -50%);
+    }
+  }
+}

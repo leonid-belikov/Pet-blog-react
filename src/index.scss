@@ -1,30 +1,262 @@
 @import 'src/common/style/variables';
 
+@font-face {
+  font-family: PhillySans;
+  src: url("./assets/fonts/PhillySans.otf");
+}
+
+body {
+  #root {
+    height: 100vh;
+    background-color: $bg-color;
+
+    .app-container,
+    .page-container {
+      height: 100%;
+    }
+  }
+}
+
 * {
+  //font-family: 'PhillySans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 1;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   text-decoration: none;
+  color: $light-color;
 }
 
-.btn {
-  padding: 5px 10px;
-  color: $dark-color;
-  width: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  border: 1px solid $dark-color;
-  cursor: pointer;
+button {
+  border: none;
+  border-radius: 0;
+}
 
-  &.confirm-btn {
-    color: $dark-color;
-    @include success-gradient-bg;
+
+body {
+  &.mq-landscape {
+    .main-page {
+      .logo-short {
+        height: 80vh;
+      }
+
+      $gap: 6rem;
+
+      .title-name,
+      .title-surname {
+        font-size: 10rem;
+        position: absolute;
+        z-index: 2;
+        letter-spacing: -0.5rem;
+        top: 50%;
+      }
+
+      .title-name {
+        transform: translateY(calc(-100% - $gap / 2));
+      }
+
+      .title-surname {
+        transform: translateY($gap / 2);
+      }
+    }
+
+    &.has-opened {
+      .main-page {
+        $animation-duration: 1s;
+        $animation-delay-longer: 1.5s;
+        $animation-delay: 500ms;
+
+        .logo-short {
+          transition: fill $animation-duration $animation-delay;
+          fill: $dark-color;
+        }
+
+        .title-name,
+        .title-surname {
+          transition: opacity $animation-duration $animation-delay, left $animation-duration $animation-delay, right $animation-duration $animation-delay;
+          opacity: 1;
+        }
+
+        .title-name {
+          right: 42%;
+        }
+
+        .title-surname {
+          left: 38%;
+        }
+
+        a {
+          transition: opacity $animation-duration $animation-delay-longer;
+          opacity: 1;
+        }
+      }
+    }
+
+    &.mq-m {
+      .main-page {
+        .title-name,
+        .title-surname {
+          font-size: 7rem;
+        }
+
+        .title-name {
+          right: 42%;
+        }
+
+        .title-surname {
+          left: 38%;
+        }
+      }
+    }
+
+    &.mq-s,
+    &.mq-xs {
+      .main-page {
+        .title-name,
+        .title-surname {
+          font-size: 5rem;
+        }
+
+        .title-name {
+          right: 42%;
+        }
+
+        .title-surname {
+          left: 38%;
+        }
+      }
+    }
   }
 
-  &.delete-btn {
-    color: $white-color;
-    @include danger-gradient-bg;
+  &.mq-portrait {
+    .main-page {
+      .logo-short {
+        width: 60vw;
+      }
+
+      $gap: 6rem;
+
+      .title-name,
+      .title-surname {
+        font-size: 10rem;
+        position: absolute;
+        z-index: 2;
+        letter-spacing: -0.5rem;
+        top: 50%;
+      }
+
+      .title-name {
+        transform: translateY(calc(-100% - $gap / 2));
+      }
+
+      .title-surname {
+        transform: translateY($gap / 2);
+      }
+    }
+
+    &.has-opened {
+      .main-page {
+        $animation-duration: 1s;
+        $animation-delay-longer: 1.5s;
+        $animation-delay: 500ms;
+
+        .logo-short {
+          transition: fill $animation-duration $animation-delay;
+          fill: $dark-color;
+        }
+
+        .title-name,
+        .title-surname {
+          transition: opacity $animation-duration $animation-delay, left $animation-duration $animation-delay, right $animation-duration $animation-delay;
+          opacity: 1;
+        }
+
+        .title-name {
+          right: 42%;
+        }
+
+        .title-surname {
+          left: 38%;
+        }
+
+        a {
+          transition: opacity $animation-duration $animation-delay-longer;
+          opacity: 1;
+        }
+      }
+    }
+
+    &.mq-m {
+      .main-page {
+        .title-name,
+        .title-surname {
+          font-size: 7rem;
+        }
+
+        .title-name {
+          right: 42%;
+        }
+
+        .title-surname {
+          left: 38%;
+        }
+      }
+    }
+
+    &.mq-s {
+      .main-page {
+        .title-name,
+        .title-surname {
+          font-size: 5rem;
+        }
+
+        .title-name {
+          right: 42%;
+        }
+
+        .title-surname {
+          left: 38%;
+        }
+      }
+    }
+
+    &.mq-xs {
+      .main-page {
+        .title-name,
+        .title-surname {
+          font-size: 4rem;
+          letter-spacing: -0.4rem;
+        }
+
+        a {
+          right: auto;
+          left: 50%;
+          transform: translateX(-50%);
+
+          &.about-link {
+            top: calc(50% + 12rem);
+          }
+
+          &.demo-link {
+            top: calc(50% + 17rem);
+          }
+        }
+      }
+
+      &.has-opened {
+        .main-page {
+          .title-name {
+            right: 34%;
+          }
+
+          .title-surname {
+            left: 28%;
+          }
+        }
+      }
+    }
   }
 }
