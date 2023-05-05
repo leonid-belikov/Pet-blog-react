@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Pet-blog-react/static/css/main.6dbe8f7c.css",
+    "main.css": "/Pet-blog-react/static/css/main.c71120e6.css",
     "main.js": "/Pet-blog-react/static/js/main.94badedd.js",
     "static/media/PhillySans.otf": "/Pet-blog-react/static/media/PhillySans.a08d08f147b23f512074.otf",
     "index.html": "/Pet-blog-react/index.html",
-    "main.6dbe8f7c.css.map": "/Pet-blog-react/static/css/main.6dbe8f7c.css.map",
+    "main.c71120e6.css.map": "/Pet-blog-react/static/css/main.c71120e6.css.map",
     "main.94badedd.js.map": "/Pet-blog-react/static/js/main.94badedd.js.map"
   },
   "entrypoints": [
-    "static/css/main.6dbe8f7c.css",
+    "static/css/main.c71120e6.css",
     "static/js/main.94badedd.js"
   ]
 }
