@@ -15,6 +15,7 @@ export default function MediaQueryChecker(props: { children: JSX.Element }) {
   })
 
   const isSmallScreen = useMediaQuery({
+    minWidth: configuration.breakpoints.small,
     maxWidth: configuration.breakpoints.medium - 1
   }, undefined, match => {
     if (match) setSize('s')
