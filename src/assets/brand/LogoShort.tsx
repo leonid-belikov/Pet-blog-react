@@ -1,7 +1,16 @@
 import React from 'react'
 
 
-function LogoShort(props: { className: string }) {
+type Data = {
+  className?: string,
+  fill?: string
+}
+
+LogoShort.defaultProps = {
+  fill: '#e4e6ff'
+}
+
+function LogoShort(props: Data) {
   const classList = [
     'logo-short',
     props.className ?? ''
@@ -11,7 +20,7 @@ function LogoShort(props: { className: string }) {
     <svg
       data-testid='logo-short'
       className={classList}
-      fill='#e4e6ff'
+      fill={props.fill}
       viewBox='0 0 15.385077 16.558424'
       version='1.1'
       id='svg1680015'

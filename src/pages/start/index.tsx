@@ -8,13 +8,13 @@ import GradientBorderButton from '../../common/components/gradient-border-button
 function MainPage() {
   const classList = [
     'page-container',
-    'main-page',
-    styles['main-page']
+    'start-page',
+    styles['start-page']
   ].join(' ')
 
   return (
-    <div data-testid='main-page' className={classList}>
-      <LogoShort className={styles['main-page-logo']}/>
+    <div data-testid='start-page' className={classList}>
+      <LogoShort className={styles['start-page-logo']}/>
       <div
         className={styles.title + ' title-name ' + styles.name}
         data-testid='name'>

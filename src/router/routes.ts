@@ -1,8 +1,0 @@
-export const DEFAULT_PATH = '/'
-export const ABOUT_PATH = '/about'
-export const DEMO_MENU_PATH = '/demo'
-export const TASK_MANAGER_PATH = '/task-manager'
-export const TASKS_PATH = 'tasks'
-export const EMPLOYEES_PATH = 'employees'
-export const TOOLS_PATH = 'tools'
-export const NONEXISTENT_PATH = '/nonexistent'

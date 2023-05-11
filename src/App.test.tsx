@@ -1,4 +1,4 @@
-import { screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import { renderApp } from './setup/test/renderApp'
 import {
   ABOUT_PATH,
@@ -8,6 +8,8 @@ import {
   TASK_MANAGER_PATH,
   TASKS_PATH, TOOLS_PATH
 } from './router/routes'
+import { MemoryRouter } from 'react-router-dom'
+import App from './App'
 
 describe('App component', () => {
   const fullTasksPath = `${TASK_MANAGER_PATH}/${TASKS_PATH}`
@@ -15,13 +17,15 @@ describe('App component', () => {
   const fullToolsPath = `${TASK_MANAGER_PATH}/${TOOLS_PATH}`
 
   it('should render the app container', () => {
-    renderApp()
+    render(<App/>)
     expect(screen.getByTestId('app')).toBeInTheDocument()
   })
 
+  // TODO: Fix all the tests!!!!!!!!!!!!!!!!!!!!
+
   it('should render the main page by default', () => {
     renderApp(DEFAULT_PATH)
-    expect(screen.getByTestId('main-page')).toBeInTheDocument()
+    expect(screen.getByTestId('start-page')).toBeInTheDocument()
   })
 
   it("should render the about page with route '/about'", () => {

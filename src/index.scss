@@ -56,7 +56,7 @@ button {
 
 body {
   &.mq-landscape {
-    .main-page {
+    .start-page {
       .logo-short {
         height: 80vh;
       }
@@ -82,7 +82,7 @@ body {
     }
 
     &.has-opened {
-      .main-page {
+      .start-page {
         $animation-duration: 1s;
         $animation-delay-longer: 1.5s;
         $animation-delay: 500ms;
@@ -114,7 +114,7 @@ body {
     }
 
     &.mq-m {
-      .main-page {
+      .start-page {
         .title-name,
         .title-surname {
           font-size: 7rem;
@@ -132,7 +132,7 @@ body {
 
     &.mq-s,
     &.mq-xs {
-      .main-page {
+      .start-page {
         .title-name,
         .title-surname {
           font-size: 5rem;
@@ -150,7 +150,7 @@ body {
   }
 
   &.mq-portrait {
-    .main-page {
+    .start-page {
       .logo-short {
         width: 60vw;
       }
@@ -176,7 +176,7 @@ body {
     }
 
     &.has-opened {
-      .main-page {
+      .start-page {
         $animation-duration: 1s;
         $animation-delay-longer: 1.5s;
         $animation-delay: 500ms;
@@ -208,7 +208,7 @@ body {
     }
 
     &.mq-m {
-      .main-page {
+      .start-page {
         .title-name,
         .title-surname {
           font-size: 7rem;
@@ -225,7 +225,7 @@ body {
     }
 
     &.mq-s {
-      .main-page {
+      .start-page {
         .title-name,
         .title-surname {
           font-size: 5rem;
@@ -242,7 +242,7 @@ body {
     }
 
     &.mq-xs {
-      .main-page {
+      .start-page {
         .title-name,
         .title-surname {
           font-size: 4rem;
@@ -265,7 +265,7 @@ body {
       }
 
       &.has-opened {
-        .main-page {
+        .start-page {
           .title-name {
             right: 34%;
           }
