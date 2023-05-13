@@ -1,0 +1,15 @@
+.about-page {
+  display: flex;
+  flex-direction: column;
+
+  .portrait {
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+
+    img {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+}
