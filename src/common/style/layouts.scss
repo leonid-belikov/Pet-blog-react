@@ -1,40 +1,40 @@
 @import './variables';
 
 .main-layout {
-  $header-height: 90px;
+  $header-height: 5rem;
   $footer-height: 120px;
 
   position: relative;
-  padding: $header-height 0 $footer-height;
+  padding: $header-height 0 0;
 
   .main-layout__header,
   .main-layout__footer {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 2;
     border-color: $dark-color;
     border-style: solid;
     border-width: 0;
+    padding: 0 40px;
+  }
+
+
+  .main-layout__header,
+  .main-layout__footer .main-information {
     display: flex;
     align-items: center;
     gap: 40px;
-    padding: 0 40px;
-
-    .soc-net-links {
-      flex-grow: 1;
-      display: flex;
-      justify-content: flex-end;
-    }
   }
 
   .main-layout__header {
+    position: fixed;
+    left: 0;
+    right: 0;
     top: 0;
+    z-index: 2;
     height: $header-height;
     border-bottom-width: 1px;
+    background-color: $bg-color;
 
     .logo-short {
-      height: 70px;
+      height: 3.2rem;
     }
 
     .page-title {
@@ -46,6 +46,7 @@
   .main-layout__content {
     z-index: 1;
     min-height: calc(100vh - $header-height - $footer-height);
+    height: 200vh;
     display: flex;
     justify-content: center;
 
@@ -56,14 +57,22 @@
   }
 
   .main-layout__footer {
-    bottom: 0;
     height: $footer-height;
     border-top-width: 1px;
+    color: $dark-color;
+
+    .main-information {
+      height: 90px;
+
+      .logo-full {
+        height: 40px;
+      }
+    }
   }
 }
 
 
-body {
+html {
   &.mq-l {
     .main-layout {
       .main-layout__content {
@@ -79,6 +88,48 @@ body {
       .main-layout__content {
         .container {
           max-width: 700px;
+        }
+      }
+    }
+  }
+
+  &.mq-xs {
+    .main-layout {
+      .main-layout__header {
+        padding: 0 15px;
+        gap: 20px;
+
+        .soc-net-links {
+          gap: 20px;
+        }
+      }
+
+      .main-layout__footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        height: 160px;
+        padding-top: 20px;
+
+        .main-information {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+          height: auto;
+
+          .soc-net-links {
+            .soc-net-link {
+              svg {
+                height: 1.8rem;
+
+                &.gmail-logo {
+                  height: 1.5rem;
+                }
+              }
+            }
+          }
         }
       }
     }

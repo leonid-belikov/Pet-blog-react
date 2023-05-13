@@ -4,6 +4,7 @@ import { ABOUT_PATH, DEMO_MENU_PATH } from '../../router/routes'
 import styles from './style.module.scss'
 import LogoShort from '../../assets/brand/LogoShort'
 import GradientBorderButton from '../../common/components/gradient-border-button'
+import SocNetLinks from '../../common/components/soc-net-links'
 
 function MainPage() {
   const classList = [
@@ -14,6 +15,7 @@ function MainPage() {
 
   return (
     <div data-testid='start-page' className={classList}>
+      <SocNetLinks className={styles['soc-net-links']} fill={'#525a9c'}/>
       <LogoShort className={styles['start-page-logo']}/>
       <div
         className={styles.title + ' title-name ' + styles.name}

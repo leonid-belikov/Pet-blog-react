@@ -123,27 +123,27 @@ export default function MediaQueryChecker(props: { children: JSX.Element }) {
 
   useEffect(() => {
     if (!size) return
-    document.body.classList.remove('mq-xs')
-    document.body.classList.remove('mq-s')
-    document.body.classList.remove('mq-m')
-    document.body.classList.remove('mq-l')
-    document.body.classList.add(`mq-${size}`)
+    document.documentElement.classList.remove('mq-xs')
+    document.documentElement.classList.remove('mq-s')
+    document.documentElement.classList.remove('mq-m')
+    document.documentElement.classList.remove('mq-l')
+    document.documentElement.classList.add(`mq-${size}`)
   }, [size])
 
 /*
   useEffect(() => {
     if (!height) return
-    document.body.classList.remove('mq-low')
-    document.body.classList.remove('mq-high')
-    document.body.classList.add(`mq-${height}`)
+    document.documentElement.classList.remove('mq-low')
+    document.documentElement.classList.remove('mq-high')
+    document.documentElement.classList.add(`mq-${height}`)
   }, [height])
 */
 
   useEffect(() => {
     if (!orientation) return
-    document.body.classList.remove('mq-portrait')
-    document.body.classList.remove('mq-landscape')
-    document.body.classList.add(`mq-${orientation}`)
+    document.documentElement.classList.remove('mq-portrait')
+    document.documentElement.classList.remove('mq-landscape')
+    document.documentElement.classList.add(`mq-${orientation}`)
   }, [orientation])
 
   return props.children

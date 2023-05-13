@@ -2,8 +2,9 @@ import React from 'react'
 import '../../style/layouts.scss'
 import LogoShort from '../../../assets/brand/LogoShort'
 import SocNetLinks from '../../components/soc-net-links'
-import { useMatches } from 'react-router-dom'
-import { RouteHandle } from '../../../router/routes'
+import { NavLink, useMatches } from 'react-router-dom'
+import { DEFAULT_PATH, RouteHandle } from '../../../router/routes'
+import LogoFull from '../../../assets/brand/LogoFull'
 
 
 function MainLayout(props: { children: JSX.Element }) {
@@ -19,7 +20,9 @@ function MainLayout(props: { children: JSX.Element }) {
   return (
     <div className='main-layout'>
       <div data-testid='header' className='main-layout__header'>
-        <LogoShort/>
+        <NavLink to={DEFAULT_PATH}>
+          <LogoShort/>
+        </NavLink>
         <div data-testid='page-title' className='page-title'>{title}</div>
         <SocNetLinks/>
       </div>
@@ -29,7 +32,13 @@ function MainLayout(props: { children: JSX.Element }) {
         </div>
       </div>
       <div data-testid='footer' className='main-layout__footer'>
-        <SocNetLinks/>
+        <div className='main-information'>
+          <NavLink to={DEFAULT_PATH}>
+            <LogoFull/>
+          </NavLink>
+          <SocNetLinks fill={'#525a9c'}/>
+        </div>
+        2023
       </div>
     </div>
   )

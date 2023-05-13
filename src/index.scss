@@ -30,8 +30,8 @@ body {
   color: $light-color;
 
   &::-webkit-scrollbar {
-    width: 7px;
-    height: 7px;
+    width: 0.5rem;
+    height: 0.5rem;
     background-color: $white-color;
     border-radius: 3px;
     overflow: auto;
@@ -54,7 +54,7 @@ button {
 }
 
 
-body {
+html {
   &.mq-landscape {
     .start-page {
       .logo-short {
@@ -106,7 +106,8 @@ body {
           left: 38%;
         }
 
-        a {
+        a,
+        .soc-net-links {
           transition: opacity $animation-duration $animation-delay-longer;
           opacity: 1;
         }
@@ -200,7 +201,8 @@ body {
           left: 38%;
         }
 
-        a {
+        a,
+        .soc-net-links {
           transition: opacity $animation-duration $animation-delay-longer;
           opacity: 1;
         }
@@ -255,11 +257,11 @@ body {
           transform: translateX(-50%);
 
           &.about-link {
-            top: calc(50% + 12rem);
+            top: calc(50% + 15rem);
           }
 
           &.demo-link {
-            top: calc(50% + 17rem);
+            top: calc(50% + 22rem);
           }
         }
       }
@@ -276,5 +278,15 @@ body {
         }
       }
     }
+  }
+}
+
+html {
+  &.mq-s {
+    font-size: 12px;
+  }
+
+  &.mq-xs {
+    font-size: 10px;
   }
 }

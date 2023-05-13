@@ -2,6 +2,13 @@
   position: relative;
   height: 100%;
 
+  .soc-net-links {
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+    right: 30px;
+  }
+
   .start-page-logo {
     position: absolute;
     z-index: 1;

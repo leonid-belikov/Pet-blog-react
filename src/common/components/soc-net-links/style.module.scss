@@ -1,0 +1,37 @@
+@import './../../style/variables';
+
+.soc-net-links {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+
+  .soc-net-link {
+    cursor: pointer;
+
+    svg {
+      transition: 200ms;
+      height: 1.5rem;
+
+      &.gmail-logo {
+        height: 1.2rem;
+      }
+    }
+
+    &:hover {
+      svg {
+        fill: $white-color;
+
+        &.gmail-logo {
+          g {
+            path:last-child {
+              transition: 200ms;
+              fill: $white-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
