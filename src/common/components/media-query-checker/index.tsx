@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import configuration from './../../../setup/mq/configuration'
+import { useLocation } from 'react-router-dom'
 
 export default function MediaQueryChecker(props: { children: JSX.Element }) {
+
+  const location = useLocation()
 
   const [size, setSize] = useState<string>()
   // const [height, setHeight] = useState<string>()
@@ -129,6 +132,13 @@ export default function MediaQueryChecker(props: { children: JSX.Element }) {
     document.documentElement.classList.remove('mq-l')
     document.documentElement.classList.add(`mq-${size}`)
   }, [size])
+
+  useEffect(() => {
+    document.documentElement.classList.remove('shown')
+    setTimeout(() => {
+      document.documentElement.classList.add(`shown`)
+    }, 0)
+  }, [location])
 
 /*
   useEffect(() => {

@@ -53,7 +53,8 @@
 
     .container {
       width: 100vw;
-      padding: 0 15px;
+      opacity: 0;
+      transition: 300ms;
     }
   }
 
@@ -74,6 +75,16 @@
 
 
 html {
+  &.shown {
+    .main-layout {
+      .main-layout__content {
+        .container {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
   &.mq-l {
     .main-layout {
       .main-layout__content {
@@ -114,6 +125,12 @@ html {
 
         .soc-net-links {
           gap: 20px;
+        }
+      }
+
+      .main-layout__content {
+        .container {
+          padding: 0 15px;
         }
       }
 

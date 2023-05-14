@@ -7,6 +7,7 @@ import ToolsPage from '../pages/task-manager/tools'
 import NotFoundPage from '../pages/not-found'
 import MainLayout from '../common/layouts/main'
 import { RouteObject } from 'react-router-dom'
+import MediaQueryChecker from '../common/components/media-query-checker'
 
 
 export const DEFAULT_PATH = '/'
@@ -22,12 +23,15 @@ export type RouteHandle = {
   title?: string
 }
 
-const wrapped = (page: JSX.Element) => <MainLayout>{page}</MainLayout>
+const wrapped = (page: JSX.Element, mainLayout: boolean = true) => {
+  const content = mainLayout ? <MainLayout>{page}</MainLayout> : page
+  return <MediaQueryChecker>{content}</MediaQueryChecker>
+}
 
 const routes: Array<RouteObject> = [
   {
     path: DEFAULT_PATH,
-    element: <StartPage/>
+    element: wrapped(<StartPage/>, false)
   },
   {
     path: ABOUT_PATH,
