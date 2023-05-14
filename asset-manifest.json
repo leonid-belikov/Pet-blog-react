@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/Pet-blog-react/static/css/main.1597dca6.css",
-    "main.js": "/Pet-blog-react/static/js/main.31297c54.js",
+    "main.css": "/Pet-blog-react/static/css/main.523b0683.css",
+    "main.js": "/Pet-blog-react/static/js/main.82c843d0.js",
+    "static/js/316.c7e84428.chunk.js": "/Pet-blog-react/static/js/316.c7e84428.chunk.js",
     "static/media/portrait.svg": "/Pet-blog-react/static/media/portrait.8b2efca16230a897b2ffa4eccb93b88d.svg",
     "static/media/PhillySans.otf": "/Pet-blog-react/static/media/PhillySans.a08d08f147b23f512074.otf",
     "index.html": "/Pet-blog-react/index.html",
-    "main.1597dca6.css.map": "/Pet-blog-react/static/css/main.1597dca6.css.map",
-    "main.31297c54.js.map": "/Pet-blog-react/static/js/main.31297c54.js.map"
+    "main.523b0683.css.map": "/Pet-blog-react/static/css/main.523b0683.css.map",
+    "main.82c843d0.js.map": "/Pet-blog-react/static/js/main.82c843d0.js.map"
   },
   "entrypoints": [
-    "static/css/main.1597dca6.css",
-    "static/js/main.31297c54.js"
+    "static/css/main.523b0683.css",
+    "static/js/main.82c843d0.js"
   ]
 }
