@@ -8,5 +8,8 @@ describe('About page component', () => {
     renderApp(ABOUT_PATH)
     const aboutPage = screen.getByTestId('about-page')
     expect(within(aboutPage).getByTestId('portrait')).toBeInTheDocument()
+    expect(within(aboutPage).getByTestId('description')).toBeInTheDocument()
+    expect(within(aboutPage).getByTestId('tech-stack')).toBeInTheDocument()
+    expect(within(aboutPage).getByTestId('experience')).toBeInTheDocument()
   })
 })

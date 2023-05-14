@@ -1,0 +1,25 @@
+html {
+  &.mq-l,
+  &.mq-m {
+    .about-page {
+      .description {
+        .contact-btn {
+          position: absolute;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  &.mq-s,
+  &.mq-xs {
+    .about-page {
+      .description {
+        .contact-btn {
+          position: static;
+          margin: 1rem auto 0;
+        }
+      }
+    }
+  }
+}

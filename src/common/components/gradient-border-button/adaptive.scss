@@ -1,0 +1,10 @@
+html {
+  &.mq-s,
+  &.mq-xs {
+    .gradient-border-button {
+      button {
+        text-transform: uppercase;
+      }
+    }
+  }
+}

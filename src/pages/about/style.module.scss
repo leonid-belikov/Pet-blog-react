@@ -1,6 +1,9 @@
+@import 'src/common/style/variables';
+
 .about-page {
   display: flex;
   flex-direction: column;
+  gap: 6rem;
 
   .portrait {
     display: flex;
@@ -10,6 +13,34 @@
     img {
       width: 100%;
       max-width: 500px;
+    }
+  }
+
+  .description {
+    $padding-y: 3rem;
+    $padding-x: 4rem;
+
+    background-color: $dark-color;
+    padding: $padding-y $padding-x;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+
+    .contact-btn {
+      top: $padding-y;
+      right: $padding-x;
+      margin-top: 1rem;
+    }
+
+    .title {
+      font-size: 1.5rem;
+    }
+
+    .text {
+      font-size: 1.2rem;
+      font-weight: 200;
     }
   }
 }
