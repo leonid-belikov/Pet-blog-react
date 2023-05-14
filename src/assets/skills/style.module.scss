@@ -1,0 +1,48 @@
+@import '/src/common/style/variables';
+
+.skill-logo {
+  border-radius: 10%;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+  }
+
+  &.js-logo {
+    background-color: #f7e018;
+  }
+
+  &.ts-logo {
+    background-color: #3178c6;
+
+    img {
+      transform: translate(-47%, -47%) scale(0.9);
+    }
+  }
+
+  &.vue-logo,
+  &.vuex-logo {
+    background-color: $dark-color;
+  }
+
+  &.react-logo {
+    img {
+      width: 90%;
+    }
+  }
+
+  &.html-logo {
+    img {
+      width: 100%;
+    }
+  }
+
+  &.redux-logo {
+    background-color: $light-color;
+  }
+}

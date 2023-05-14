@@ -3,12 +3,13 @@ import { renderApp } from './setup/test/renderApp'
 import {
   ABOUT_PATH,
   DEFAULT_PATH,
-  DEMO_MENU_PATH, EMPLOYEES_PATH,
+  DEMO_MENU_PATH,
+  EMPLOYEES_PATH,
   NONEXISTENT_PATH,
   TASK_MANAGER_PATH,
-  TASKS_PATH, TOOLS_PATH
+  TASKS_PATH,
+  TOOLS_PATH
 } from './router/routes'
-import { MemoryRouter } from 'react-router-dom'
 import App from './App'
 
 describe('App component', () => {

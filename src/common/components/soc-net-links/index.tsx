@@ -58,7 +58,7 @@ function SocNetLinks(props: Data) {
   ].join(' ')
 
   return (
-    <div className={classList}>
+    <div data-testid='soc-net-links' className={classList}>
       {socnets.map(item => {
         return (
           <div key={item.name} className={styles['soc-net-link']} onClick={getHandler(item)}>

@@ -10,24 +10,18 @@ describe('Main layout', () => {
     expect(screen.getByTestId('footer')).toBeInTheDocument()
   })
 
-  it('should render logo, page title and soc-net icons in header', async () => {
+  it('should render logo, page title and soc-net links in header', async () => {
     renderApp(ABOUT_PATH)
     const header = screen.getByTestId('header')
     expect(within(header).getByTestId('logo-short')).toBeInTheDocument()
     expect(within(header).getByTestId('page-title')).toBeInTheDocument()
-    expect(within(header).getByTestId('github-logo')).toBeInTheDocument()
-    expect(within(header).getByTestId('linkedin-logo')).toBeInTheDocument()
-    expect(within(header).getByTestId('leetcode-logo')).toBeInTheDocument()
-    expect(within(header).getByTestId('gmail-logo')).toBeInTheDocument()
+    expect(within(header).getByTestId('soc-net-links')).toBeInTheDocument()
   })
 
-  it('should render full logo and soc-net icons in footer', () => {
+  it('should render full logo and soc-net links in footer', () => {
     renderApp(ABOUT_PATH)
     const footer = screen.getByTestId('footer')
     expect(within(footer).getByTestId('logo-full')).toBeInTheDocument()
-    expect(within(footer).getByTestId('github-logo')).toBeInTheDocument()
-    expect(within(footer).getByTestId('linkedin-logo')).toBeInTheDocument()
-    expect(within(footer).getByTestId('leetcode-logo')).toBeInTheDocument()
-    expect(within(footer).getByTestId('gmail-logo')).toBeInTheDocument()
+    expect(within(footer).getByTestId('soc-net-links')).toBeInTheDocument()
   })
 })

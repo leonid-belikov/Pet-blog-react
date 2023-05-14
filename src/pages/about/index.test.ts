@@ -4,12 +4,12 @@ import { ABOUT_PATH } from '../../router/routes'
 
 
 describe('About page component', () => {
-  it('should render the portrait', () => {
+  it('should render the portrait, description, tech-stack, experience', () => {
     renderApp(ABOUT_PATH)
     const aboutPage = screen.getByTestId('about-page')
     expect(within(aboutPage).getByTestId('portrait')).toBeInTheDocument()
     expect(within(aboutPage).getByTestId('description')).toBeInTheDocument()
-    expect(within(aboutPage).getByTestId('tech-stack')).toBeInTheDocument()
+    expect(within(aboutPage).getByTestId('skill-set')).toBeInTheDocument()
     expect(within(aboutPage).getByTestId('experience')).toBeInTheDocument()
   })
 })

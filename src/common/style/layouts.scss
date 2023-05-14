@@ -46,9 +46,10 @@
   .main-layout__content {
     z-index: 1;
     min-height: calc(100vh - $header-height - $footer-height);
-    height: 200vh;
+    //height: 200vh;
     display: flex;
     justify-content: center;
+    padding-bottom: 6rem;
 
     .container {
       width: 100vw;

@@ -4,6 +4,7 @@ import './adaptive.scss'
 import portrait from '../../assets/images/portrait.svg'
 import GradientBorderButton from '../../common/components/gradient-border-button'
 import socnets from '../../assets/socnets'
+import SkillSet from '../../common/components/skill-set'
 
 
 function AboutPage() {
@@ -43,6 +44,12 @@ function AboutPage() {
           background='dark'
           width={150}
           onClick={handleContactBtnClick}/>
+      </div>
+      <div className={styles['skills-info'] + ' skills-info'}>
+        <SkillSet/>
+        <div data-testid='experience' className={styles['experience']}>
+          Experience
+        </div>
       </div>
     </div>
   )

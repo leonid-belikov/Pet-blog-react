@@ -13,7 +13,7 @@ type Data = {
 GradientBorderButton.defaultProps = {
   background: 'default',
   onClick: () => {},
-  width: 120
+  width: 140
 }
 
 function GradientBorderButton(props: Data) {
