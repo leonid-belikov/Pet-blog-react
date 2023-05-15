@@ -51,14 +51,73 @@
     gap: 6rem;
 
     .experience {
-      $padding-y: 3rem;
-      $padding-x: 4rem;
+      $padding-y: 2rem;
+      $padding-x: 3em;
 
       background-color: $light-color;
-      color: $dark-color;
       flex-grow: 1;
       border-radius: 10px;
       padding: $padding-y $padding-x;
+      position: relative;
+      height: 285px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      * {
+        color: $dark-color;
+      }
+
+      .title {
+        position: relative;
+        z-index: 2;
+        font-size: 1.5rem;
+        background-color: $light-color;
+        padding: 0 8px 2px 0;
+        border-radius: 13px;
+        width: fit-content;
+      }
+
+      .figure {
+        position: absolute;
+        top: $padding-y;
+        right: $padding-x;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        z-index: 2;
+
+        .value {
+          font-family: 'Ubuntu Mono', monospace;
+          font-size: 7rem;
+          line-height: 0.8;
+          letter-spacing: -0.5rem;
+        }
+
+        .units {
+          font-size: 1.2rem;
+          background-color: $light-color;
+          padding: 0 0 2px 8px;
+          border-radius: 13px;
+        }
+      }
+
+      .picture {
+        position: absolute;
+        left: 50%;
+        top: calc(50% - 1.5rem);
+        transform: translate(-50%, -50%);
+        z-index: 1;
+
+        img {
+          height: 160px;
+        }
+      }
+
+      .learn-more-btn {
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 }
