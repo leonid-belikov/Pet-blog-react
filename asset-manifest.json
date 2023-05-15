@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/Pet-blog-react/static/css/main.3530a478.css",
-    "main.js": "/Pet-blog-react/static/js/main.9fb72dd9.js",
+    "main.css": "/Pet-blog-react/static/css/main.ba677b8d.css",
+    "main.js": "/Pet-blog-react/static/js/main.6fb488a4.js",
     "static/media/portrait.svg": "/Pet-blog-react/static/media/portrait.8b2efca16230a897b2ffa4eccb93b88d.svg",
     "static/media/logo_mysql.png": "/Pet-blog-react/static/media/logo_mysql.1d9c763c74a5378bb7f4.png",
     "static/media/logo_redux.png": "/Pet-blog-react/static/media/logo_redux.86c43ad34d91d2505990.png",
     "static/media/logo_vuex.png": "/Pet-blog-react/static/media/logo_vuex.15c57e49a1a77be16f1a.png",
+    "static/media/typing_man.svg": "/Pet-blog-react/static/media/typing_man.0d566501d321673ef0015b3f76ca692a.svg",
     "static/media/logo_react.png": "/Pet-blog-react/static/media/logo_react.20adfb35ae6a6e5817bf.png",
     "static/media/logo_akita.png": "/Pet-blog-react/static/media/logo_akita.f51daf1c2ce0cfeac9b1.png",
     "static/media/logo_jest.png": "/Pet-blog-react/static/media/logo_jest.dc114a9ccad82bd8838f.png",
@@ -14,11 +15,11 @@
     "static/media/logo_vue.png": "/Pet-blog-react/static/media/logo_vue.ac7dc62c33baf750fe7b.png",
     "static/media/PhillySans.otf": "/Pet-blog-react/static/media/PhillySans.a08d08f147b23f512074.otf",
     "index.html": "/Pet-blog-react/index.html",
-    "main.3530a478.css.map": "/Pet-blog-react/static/css/main.3530a478.css.map",
-    "main.9fb72dd9.js.map": "/Pet-blog-react/static/js/main.9fb72dd9.js.map"
+    "main.ba677b8d.css.map": "/Pet-blog-react/static/css/main.ba677b8d.css.map",
+    "main.6fb488a4.js.map": "/Pet-blog-react/static/js/main.6fb488a4.js.map"
   },
   "entrypoints": [
-    "static/css/main.3530a478.css",
-    "static/js/main.9fb72dd9.js"
+    "static/css/main.ba677b8d.css",
+    "static/js/main.6fb488a4.js"
   ]
 }
