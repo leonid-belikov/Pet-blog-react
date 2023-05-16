@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/Pet-blog-react/static/css/main.57e4bc3a.css",
-    "main.js": "/Pet-blog-react/static/js/main.6fb488a4.js",
+    "main.css": "/Pet-blog-react/static/css/main.fe636339.css",
+    "main.js": "/Pet-blog-react/static/js/main.88c6541e.js",
     "static/media/portrait.svg": "/Pet-blog-react/static/media/portrait.8b2efca16230a897b2ffa4eccb93b88d.svg",
+    "static/media/DejaVuSans.ttf": "/Pet-blog-react/static/media/DejaVuSans.67ed0b9aeb82e75288aa.ttf",
     "static/media/logo_mysql.png": "/Pet-blog-react/static/media/logo_mysql.1d9c763c74a5378bb7f4.png",
     "static/media/logo_redux.png": "/Pet-blog-react/static/media/logo_redux.86c43ad34d91d2505990.png",
     "static/media/logo_vuex.png": "/Pet-blog-react/static/media/logo_vuex.15c57e49a1a77be16f1a.png",
@@ -12,14 +13,15 @@
     "static/media/logo_jest.png": "/Pet-blog-react/static/media/logo_jest.dc114a9ccad82bd8838f.png",
     "static/media/logo_php.png": "/Pet-blog-react/static/media/logo_php.3fc15cf443a81ef2d0a4.png",
     "static/media/logo_css.png": "/Pet-blog-react/static/media/logo_css.9d56f9438ebb9ff1940b.png",
+    "static/media/logo_rxjs.png": "/Pet-blog-react/static/media/logo_rxjs.175f04486a2bfbf37624.png",
     "static/media/logo_vue.png": "/Pet-blog-react/static/media/logo_vue.ac7dc62c33baf750fe7b.png",
     "static/media/PhillySans.otf": "/Pet-blog-react/static/media/PhillySans.a08d08f147b23f512074.otf",
     "index.html": "/Pet-blog-react/index.html",
-    "main.57e4bc3a.css.map": "/Pet-blog-react/static/css/main.57e4bc3a.css.map",
-    "main.6fb488a4.js.map": "/Pet-blog-react/static/js/main.6fb488a4.js.map"
+    "main.fe636339.css.map": "/Pet-blog-react/static/css/main.fe636339.css.map",
+    "main.88c6541e.js.map": "/Pet-blog-react/static/js/main.88c6541e.js.map"
   },
   "entrypoints": [
-    "static/css/main.57e4bc3a.css",
-    "static/js/main.6fb488a4.js"
+    "static/css/main.fe636339.css",
+    "static/js/main.88c6541e.js"
   ]
 }
