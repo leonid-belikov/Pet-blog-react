@@ -41,7 +41,6 @@
     .text {
       font-size: 1.2rem;
       font-weight: 200;
-      letter-spacing: 0.1rem;
       line-height: 1.5;
     }
   }
@@ -88,10 +87,10 @@
         z-index: 2;
 
         .value {
-          font-family: 'Ubuntu Mono', monospace;
+          font-family: 'DejaVuSans', sans-serif;
           font-size: 7rem;
           line-height: 0.8;
-          letter-spacing: -0.5rem;
+          letter-spacing: -0.7rem;
         }
 
         .units {

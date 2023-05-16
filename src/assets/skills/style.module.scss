@@ -4,6 +4,7 @@
   border-radius: 10%;
   position: relative;
   overflow: hidden;
+  flex-shrink: 0;
 
   img {
     position: absolute;
@@ -13,11 +14,15 @@
     width: 80%;
   }
 
-  &.js-logo {
+  &.clickable {
+    cursor: pointer;
+  }
+
+  &.JavaScript-logo {
     background-color: #f7e018;
   }
 
-  &.ts-logo {
+  &.TypeScript-logo {
     background-color: #3178c6;
 
     img {
@@ -25,24 +30,56 @@
     }
   }
 
-  &.vue-logo,
-  &.vuex-logo {
+  &.Vue-logo,
+  &.Vuex-logo {
     background-color: $dark-color;
   }
 
-  &.react-logo {
+  &.React-logo {
     img {
       width: 90%;
     }
   }
 
-  &.html-logo {
+  &.HTML-logo {
     img {
       width: 100%;
     }
   }
 
-  &.redux-logo {
+  &.Git-logo {
+    img {
+      width: 100%;
+    }
+  }
+
+  &.PHP-logo {
+    img {
+      width: 100%;
+    }
+  }
+
+  &.Python-logo {
+    img {
+      width: 100%;
+    }
+  }
+
+  &.PostgreSQL-logo {
+    img {
+      width: 100%;
+    }
+  }
+
+  &.Redux-logo {
     background-color: $light-color;
+  }
+
+  &.MySQL-logo {
+    background-color: $light-color;
+  }
+
+  &.Akita-logo {
+    background-color: $white-color;
   }
 }

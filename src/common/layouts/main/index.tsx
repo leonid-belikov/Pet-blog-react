@@ -19,26 +19,28 @@ function MainLayout(props: { children: JSX.Element }) {
 
   return (
     <div className='main-layout'>
-      <div data-testid='header' className='main-layout__header'>
-        <NavLink to={DEFAULT_PATH}>
-          <LogoShort/>
-        </NavLink>
-        <div data-testid='page-title' className='page-title'>{title}</div>
-        <SocNetLinks/>
-      </div>
-      <div className='main-layout__content'>
-        <div className='container'>
-          {props.children}
-        </div>
-      </div>
-      <div data-testid='footer' className='main-layout__footer'>
-        <div className='main-information'>
+      <div className='scroll-section'>
+        <div data-testid='header' className='main-layout__header'>
           <NavLink to={DEFAULT_PATH}>
-            <LogoFull/>
+            <LogoShort/>
           </NavLink>
-          <SocNetLinks fill={'#525a9c'}/>
+          <div data-testid='page-title' className='page-title'>{title}</div>
+          <SocNetLinks/>
         </div>
-        2023
+        <div className='main-layout__content'>
+          <div className='container'>
+            {props.children}
+          </div>
+        </div>
+        <div data-testid='footer' className='main-layout__footer'>
+          <div className='main-information'>
+            <NavLink to={DEFAULT_PATH}>
+              <LogoFull/>
+            </NavLink>
+            <SocNetLinks fill={'#525a9c'}/>
+          </div>
+          2023
+        </div>
       </div>
     </div>
   )

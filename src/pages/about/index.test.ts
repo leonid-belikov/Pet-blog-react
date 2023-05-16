@@ -11,5 +11,6 @@ describe('About page component', () => {
     expect(within(aboutPage).getByTestId('description')).toBeInTheDocument()
     expect(within(aboutPage).getByTestId('skill-set')).toBeInTheDocument()
     expect(within(aboutPage).getByTestId('experience')).toBeInTheDocument()
+    expect(within(aboutPage).getByTestId('timeline')).toBeInTheDocument()
   })
 })

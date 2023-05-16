@@ -16,29 +16,50 @@ import vue from './images/logo_vue.png'
 import vuex from './images/logo_vuex.png'
 import webdriverio from './images/logo_webdriverio.png'
 
+
+export enum SkillEnum {
+  akita = 'Akita',
+  css = 'CSS',
+  git = 'Git',
+  html = 'HTML',
+  jest = 'Jest',
+  js = 'JavaScript',
+  mysql = 'MySQL',
+  php = 'PHP',
+  postgresql = 'PostgreSQL',
+  python = 'Python',
+  react = 'React',
+  redux = 'Redux',
+  rxjs = 'RxJS',
+  ts = 'TypeScript',
+  vue = 'Vue',
+  vuex = 'Vuex',
+  webdriverio = 'WebdriverIO'
+}
+
 export type Skill = {
-  name: string,
+  name: SkillEnum,
   logo: string
 }
 
 const skills: Array<Skill> = [
-  { name: 'akita', logo: akita },
-  { name: 'css', logo: css },
-  { name: 'git', logo: git },
-  { name: 'html', logo: html },
-  { name: 'jest', logo: jest },
-  { name: 'js', logo: js },
-  { name: 'mysql', logo: mysql },
-  { name: 'php', logo: php },
-  { name: 'postgresql', logo: postgresql },
-  { name: 'python', logo: python },
-  { name: 'react', logo: react },
-  { name: 'redux', logo: redux },
-  { name: 'rxjs', logo: rxjs },
-  { name: 'ts', logo: ts },
-  { name: 'vue', logo: vue },
-  { name: 'vuex', logo: vuex },
-  { name: 'webdriverio', logo: webdriverio },
+  { name: SkillEnum.akita, logo: akita },
+  { name: SkillEnum.css, logo: css },
+  { name: SkillEnum.git, logo: git },
+  { name: SkillEnum.html, logo: html },
+  { name: SkillEnum.jest, logo: jest },
+  { name: SkillEnum.js, logo: js },
+  { name: SkillEnum.mysql, logo: mysql },
+  { name: SkillEnum.php, logo: php },
+  { name: SkillEnum.postgresql, logo: postgresql },
+  { name: SkillEnum.python, logo: python },
+  { name: SkillEnum.react, logo: react },
+  { name: SkillEnum.redux, logo: redux },
+  { name: SkillEnum.rxjs, logo: rxjs },
+  { name: SkillEnum.ts, logo: ts },
+  { name: SkillEnum.vue, logo: vue },
+  { name: SkillEnum.vuex, logo: vuex },
+  { name: SkillEnum.webdriverio, logo: webdriverio },
 ]
 
 export default skills

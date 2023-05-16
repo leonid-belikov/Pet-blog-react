@@ -2,73 +2,78 @@
 
 .main-layout {
   $header-height: 5rem;
-  $footer-height: 120px;
+  $footer-height: 130px;
 
   position: relative;
   padding: $header-height 0 0;
 
-  .main-layout__header,
-  .main-layout__footer {
-    border-color: $dark-color;
-    border-style: solid;
-    border-width: 0;
-    padding: 0 40px;
-  }
+  .scroll-section {
+    overflow: auto;
+    height: calc(100vh - $header-height);
 
-
-  .main-layout__header,
-  .main-layout__footer .main-information {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-  }
-
-  .main-layout__header {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 2;
-    height: $header-height;
-    border-bottom-width: 1px;
-    background-color: $bg-color;
-
-    .logo-short {
-      height: 3.2rem;
+    .main-layout__header,
+    .main-layout__footer {
+      border-color: $dark-color;
+      border-style: solid;
+      border-width: 0;
+      padding: 0 40px;
     }
 
-    .page-title {
-      text-transform: uppercase;
-      font-size: 1.5rem;
+
+    .main-layout__header,
+    .main-layout__footer .main-information {
+      display: flex;
+      align-items: center;
+      gap: 40px;
     }
-  }
 
-  .main-layout__content {
-    position: relative;
-    z-index: 1;
-    min-height: calc(100vh - $header-height - $footer-height);
-    //height: 200vh;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 6rem;
+    .main-layout__header {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 2;
+      height: $header-height;
+      border-bottom-width: 1px;
+      background-color: $bg-color;
 
-    .container {
-      width: 100vw;
-      opacity: 0;
-      transition: 300ms;
+      .logo-short {
+        height: 3.2rem;
+      }
+
+      .page-title {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+      }
     }
-  }
 
-  .main-layout__footer {
-    height: $footer-height;
-    border-top-width: 1px;
-    color: $dark-color;
+    .main-layout__content {
+      position: relative;
+      z-index: 1;
+      min-height: calc(100vh - $header-height - $footer-height);
+      //height: 200vh;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 6rem;
 
-    .main-information {
-      height: 90px;
+      .container {
+        width: 100vw;
+        opacity: 0;
+        transition: 300ms;
+      }
+    }
 
-      .logo-full {
-        height: 40px;
+    .main-layout__footer {
+      height: $footer-height;
+      border-top-width: 1px;
+      color: $dark-color;
+
+      .main-information {
+        height: 90px;
+
+        .logo-full {
+          height: 40px;
+        }
       }
     }
   }

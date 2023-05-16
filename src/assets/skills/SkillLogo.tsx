@@ -1,11 +1,13 @@
 import React from 'react'
-import skills from './index'
+import skills, { SkillEnum } from './index'
 import styles from './style.module.scss'
+import { Tooltip } from 'antd'
 
 
 type Data = {
-  name: string
+  name: SkillEnum
   size?: number
+  onClick?: () => void
 }
 
 function SkillLogo(props: Data) {
@@ -14,6 +16,7 @@ function SkillLogo(props: Data) {
 
   const classList = [styles['skill-logo']]
   if (styles[`${props.name}-logo`]) classList.push(styles[`${props.name}-logo`])
+  if (props.onClick) classList.push(styles[`clickable`])
 
   const style: React.CSSProperties = {}
   if (props.size) {
@@ -22,12 +25,15 @@ function SkillLogo(props: Data) {
   }
 
   return (
-    <div
-      data-testid={`${props.name}-logo`}
-      style={style}
-      className={classList.join(' ')}>
-      <img src={skill.logo} alt=''/>
-    </div>
+    <Tooltip title={skill.name} arrow={false} placement={'bottom'}>
+      <div
+        data-testid={`${props.name}-logo`}
+        style={style}
+        className={classList.join(' ')}
+        onClick={props.onClick}>
+        <img src={skill.logo} alt=''/>
+      </div>
+    </Tooltip>
   )
 }
 

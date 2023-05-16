@@ -2,10 +2,12 @@ import React, { useCallback } from 'react'
 import styles from './style.module.scss'
 import './adaptive.scss'
 import portrait from '../../assets/images/portrait.svg'
-import image from '../../assets/images/typing_man.svg'
+import image from '../../assets/images/Typing_man.svg'
 import GradientBorderButton from '../../common/components/gradient-border-button'
 import socnets from '../../assets/socnets'
 import SkillSet from '../../common/components/skill-set'
+import Timeline from './components/timeline'
+import { openLinkInNewTab, scrollToElementById } from '../../common/utils/helpers'
 
 
 function AboutPage() {
@@ -15,14 +17,13 @@ function AboutPage() {
   }
 
   const handleContactBtnClick = useCallback(() => {
-    let element: HTMLAnchorElement | null = document.createElement('a')
     const link = socnets.find(item => item.name === 'linkedin')?.link
     if (!link) return
-    element.setAttribute('href', link)
-    element.setAttribute('target', '_blank')
-    element.setAttribute('rel', 'noopener noreferrer')
-    element.click()
-    element = null
+    openLinkInNewTab(link)
+  }, [])
+
+  const handleLearnBtnClick = useCallback(() => {
+    scrollToElementById('timeline')
   }, [])
 
   return (
@@ -65,10 +66,15 @@ function AboutPage() {
             <img src={image} alt=''/>
           </div>
           <div className={styles['learn-more-btn']}>
-            <GradientBorderButton text='Learn more' background='light' width={150}/>
+            <GradientBorderButton
+              text='Learn more'
+              background='light'
+              width={150}
+              onClick={handleLearnBtnClick}/>
           </div>
         </div>
       </div>
+      <Timeline/>
     </div>
   )
 }
