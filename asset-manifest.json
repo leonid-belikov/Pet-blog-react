@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Pet-blog-react/static/css/main.4b0b19aa.css",
-    "main.js": "/Pet-blog-react/static/js/main.fe2e6b31.js",
+    "main.css": "/Pet-blog-react/static/css/main.7e10d59e.css",
+    "main.js": "/Pet-blog-react/static/js/main.badebb53.js",
     "static/media/portrait.svg": "/Pet-blog-react/static/media/portrait.8b2efca16230a897b2ffa4eccb93b88d.svg",
     "static/media/DejaVuSans.ttf": "/Pet-blog-react/static/media/DejaVuSans.67ed0b9aeb82e75288aa.ttf",
     "static/media/logo_mysql.png": "/Pet-blog-react/static/media/logo_mysql.1d9c763c74a5378bb7f4.png",
@@ -15,6 +15,7 @@
     "static/media/logo_react.png": "/Pet-blog-react/static/media/logo_react.20adfb35ae6a6e5817bf.png",
     "static/media/logo_akita.png": "/Pet-blog-react/static/media/logo_akita.f51daf1c2ce0cfeac9b1.png",
     "static/media/logo_jest.png": "/Pet-blog-react/static/media/logo_jest.dc114a9ccad82bd8838f.png",
+    "static/media/coins.png": "/Pet-blog-react/static/media/coins.d2d276db59cf462d2563.png",
     "static/media/Information_tab.svg": "/Pet-blog-react/static/media/Information_tab.c1863f6c9a247120fd8c8d380354ad3d.svg",
     "static/media/logo_php.png": "/Pet-blog-react/static/media/logo_php.3fc15cf443a81ef2d0a4.png",
     "static/media/logo_css.png": "/Pet-blog-react/static/media/logo_css.9d56f9438ebb9ff1940b.png",
@@ -23,13 +24,13 @@
     "static/media/Flying_without_bg.svg": "/Pet-blog-react/static/media/Flying_without_bg.27bfce94d6274d724d844bd4581cf6e0.svg",
     "static/media/PhillySans.otf": "/Pet-blog-react/static/media/PhillySans.a08d08f147b23f512074.otf",
     "static/media/route-m.svg": "/Pet-blog-react/static/media/route-m.2e007fc99ed181af8534.svg",
-    "static/media/route-l.svg": "/Pet-blog-react/static/media/route-l.ad6eaf748f519569e681.svg",
+    "static/media/route-l.svg": "/Pet-blog-react/static/media/route-l.9f8028d35c9299f7229e.svg",
     "index.html": "/Pet-blog-react/index.html",
-    "main.4b0b19aa.css.map": "/Pet-blog-react/static/css/main.4b0b19aa.css.map",
-    "main.fe2e6b31.js.map": "/Pet-blog-react/static/js/main.fe2e6b31.js.map"
+    "main.7e10d59e.css.map": "/Pet-blog-react/static/css/main.7e10d59e.css.map",
+    "main.badebb53.js.map": "/Pet-blog-react/static/js/main.badebb53.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b0b19aa.css",
-    "static/js/main.fe2e6b31.js"
+    "static/css/main.7e10d59e.css",
+    "static/js/main.badebb53.js"
   ]
 }
