@@ -11,16 +11,17 @@ import { openLinkInNewTab, scrollToElementById } from '../../common/utils/helper
 
 
 function AboutPage() {
+  const linkedin = socnets.find(item => item.name === 'linkedin')?.link
+
   const getExperienceValue = () => {
     const now = new Date()
     return now.getFullYear() - 2018
   }
 
   const handleContactBtnClick = useCallback(() => {
-    const link = socnets.find(item => item.name === 'linkedin')?.link
-    if (!link) return
-    openLinkInNewTab(link)
-  }, [])
+    if (!linkedin) return
+    openLinkInNewTab(linkedin)
+  }, [linkedin])
 
   const handleLearnBtnClick = useCallback(() => {
     scrollToElementById('timeline')
@@ -34,12 +35,29 @@ function AboutPage() {
       <div data-testid='description' className={styles['description'] + ' description'}>
         <div className={styles['title']}>
           <p>Hi, I'm Leonid</p>
-          <p>Welcome to my page</p>
+          <p>Frontend web developer</p>
         </div>
         <div className={styles['text']}>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit pulvinar in, viverra duis eleifend sociosqu at
-          tempor risus nam. Dapibus ad tellus primis ridiculus ipsum pharetra ultricies dis eget. Dapibus ad tellus
-          primis ridiculus ipsum pharetra ultricies dis eget.
+          <p>
+            I made this site to show my abilities and to tell a little about my skills and experience. I'm currently
+            looking for a new job, so if you're hiring, maybe this is a beginning of our cooperation. If not, please
+            share this link with someone who is looking for a frontend developer and feel free to add me in your
+            connections on <a href={linkedin || '#'} target='_blank' rel='noopener noreferrer'>linkedin.com</a>. It would be really helpful for me, and I'll be very grateful ^_^
+          </p>
+          <p>
+            Now I'm leading frontend development on my current company. And here are some of the sites I'm responsible
+            for: <a href='https://lk.app-work.org' target='_blank' rel='noopener noreferrer'>app-work.org</a>, <a href='https://developer.get-work.app/en/login' target='_blank' rel='noopener noreferrer'>get-work.app</a>. Unfortunately, I can't present their source
+            code because of NDA, but you can get the source code of current site <a href='https://github.com/leonid-belikov/Pet-blog-react' target='_blank' rel='noopener noreferrer'>here</a>.
+          </p>
+          <p>
+            Probably you would like to wonder why I decided to change my job. Well, the answer is quite clear. I'm from
+            Russia, and I was forced to leave this country last year because of its inhuman aggression against Ukraine.
+            Now I live in Turkey and would like to stop any relationships with the state of Russia. And on the other
+            hand, I feel like I'm ready for more challenging projects.
+          </p>
+          <p>
+            And please do not judge me strictly for the design :) I am not a designer.
+          </p>
         </div>
         <GradientBorderButton
           className={styles['contact-btn'] + ' contact-btn'}

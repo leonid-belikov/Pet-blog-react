@@ -12,7 +12,7 @@ const socnets: Array<SocNet> = [
   },
   {
     name: 'linkedin',
-    link: 'https://www.linkedin.com/in/belikov-web-dev',
+    link: 'https://www.linkedin.com/in/belikov-frontend',
     action: 'move'
   },
   {
