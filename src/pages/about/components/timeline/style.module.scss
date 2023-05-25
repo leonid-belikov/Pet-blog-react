@@ -44,7 +44,9 @@
       }
 
       .description {
-
+        a {
+          text-decoration: underline;
+        }
       }
     }
 
@@ -148,7 +150,7 @@
     }
 
     &.image-4 {
-      top: 1820px;
+      top: 1920px;
       right: 0;
       width: 25%;
     }

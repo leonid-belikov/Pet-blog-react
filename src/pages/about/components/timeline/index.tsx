@@ -60,9 +60,7 @@ function Timeline() {
                 ))}
               </div>
             </div>
-            <div className={styles['description']}>
-              {item.description}
-            </div>
+            <div className={styles['description']} dangerouslySetInnerHTML={{ __html: item.description }}/>
           </div>
         </div>
       ))}
@@ -75,7 +73,9 @@ function Timeline() {
       <img className={styles['image-2']} src={image_2} alt=''/>
       <img className={styles['image-3']} src={image_3} alt=''/>
       <img className={styles['image-4']} src={image_4} alt=''/>
-      <img className={styles['image-5']} src={image_5} alt=''/>
+      <Tooltip title={'I left Russia and moved to Turkey in 2022'} arrow={false} placement='right'>
+        <img className={styles['image-5']} src={image_5} alt=''/>
+      </Tooltip>
       <img className={styles['image-6']} src={image_6} alt=''/>
     </div>
   )
