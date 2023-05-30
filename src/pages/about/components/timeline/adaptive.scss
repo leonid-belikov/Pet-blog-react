@@ -4,7 +4,7 @@ html {
       background-image: url("../../../../../src/assets/images/route-l.svg");
       background-repeat: no-repeat;
       background-position-x: center;
-      padding-bottom: 200px;
+      padding-bottom: 175px;
 
       #timeline-step-1 {
         width: 60%;
@@ -115,7 +115,7 @@ html {
 
       #timeline-step-10 {
         padding-top: 100px;
-        width: 80%;
+        width: 83%;
       }
 
       #timeline-step-11 {
@@ -132,7 +132,6 @@ html {
   &.mq-s,
   &.mq-xs {
     #timeline {
-      padding-bottom: 6rem;
       gap: 0;
 
       > img {
@@ -175,7 +174,7 @@ html {
       }
 
       .add-twist-btn {
-        margin: 3rem auto;
+        bottom: -2.5rem;
       }
     }
   }

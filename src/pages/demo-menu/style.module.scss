@@ -1,0 +1,33 @@
+@import 'src/common/style/variables';
+
+.demo-menu-page {
+  background-image: url(../../assets/images/demo-menu-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    'tsk evt blg'
+    'tsk glr blg'
+    'str glr blg'
+    'str nws nws';
+  min-height: 260px;
+
+  .menu-item {
+    border: 0.25rem solid $bg-color;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    transition: 200ms;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: inset 0 0 0 1px $white-color;
+      background: linear-gradient(315deg, transparent, $dark-color);
+      font-weight: 700;
+    }
+  }
+}

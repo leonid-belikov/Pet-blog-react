@@ -1,0 +1,44 @@
+.demo-menu-page {
+  .menu-item {
+    &.Tasks {
+      grid-area: tsk;
+      border-top-width: 0.5rem;
+      border-left: none;
+    }
+
+    &.Store {
+      grid-area: str;
+      border-bottom-width: 0.5rem;
+      border-left: none;
+    }
+
+    &.Events {
+      grid-area: evt;
+      border-top-width: 0.5rem;
+    }
+
+    &.Gallery {
+      grid-area: glr;
+    }
+
+    &.News {
+      grid-area: nws;
+      border-bottom-width: 0.5rem;
+      border-right: none;
+    }
+
+    &.Blog {
+      grid-area: blg;
+      border-top-width: 0.5rem;
+      border-right: none;
+    }
+  }
+}
+
+html {
+  &.mq-xs {
+    .demo-menu-page {
+      margin: 0 -15px;
+    }
+  }
+}

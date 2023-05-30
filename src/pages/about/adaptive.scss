@@ -2,6 +2,8 @@ html {
   &.mq-l,
   &.mq-m {
     .about-page {
+      padding-bottom: 6rem;
+
       .description {
         .contact-btn {
           position: absolute;
@@ -14,6 +16,8 @@ html {
   &.mq-s,
   &.mq-xs {
     .about-page {
+      padding-bottom: 9rem;
+
       .description {
         .contact-btn {
           position: static;

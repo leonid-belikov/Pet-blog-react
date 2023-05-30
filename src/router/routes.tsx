@@ -8,16 +8,15 @@ import NotFoundPage from '../pages/not-found'
 import MainLayout from '../common/layouts/main'
 import { RouteObject } from 'react-router-dom'
 import MediaQueryChecker from '../common/components/media-query-checker'
+import {
+  ABOUT_PATH,
+  DEFAULT_PATH,
+  DEMO_MENU_PATH,
+  EMPLOYEES_PATH,
+  TASK_MANAGER_PATH,
+  TASKS_PATH, TOOLS_PATH
+} from '../common/utils/constants'
 
-
-export const DEFAULT_PATH = '/'
-export const ABOUT_PATH = '/about'
-export const DEMO_MENU_PATH = '/demo'
-export const TASK_MANAGER_PATH = '/task-manager'
-export const TASKS_PATH = 'tasks'
-export const EMPLOYEES_PATH = 'employees'
-export const TOOLS_PATH = 'tools'
-export const NONEXISTENT_PATH = '/nonexistent'
 
 export type RouteHandle = {
   title?: string

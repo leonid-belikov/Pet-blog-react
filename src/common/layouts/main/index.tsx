@@ -3,8 +3,9 @@ import '../../style/layouts.scss'
 import LogoShort from '../../../assets/brand/LogoShort'
 import SocNetLinks from '../../components/soc-net-links'
 import { NavLink, useMatches } from 'react-router-dom'
-import { DEFAULT_PATH, RouteHandle } from '../../../router/routes'
+import { RouteHandle } from '../../../router/routes'
 import LogoFull from '../../../assets/brand/LogoFull'
+import { DEFAULT_PATH } from '../../utils/constants'
 
 
 function MainLayout(props: { children: JSX.Element }) {

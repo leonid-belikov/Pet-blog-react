@@ -9,7 +9,7 @@ import {
   TASK_MANAGER_PATH,
   TASKS_PATH,
   TOOLS_PATH
-} from './router/routes'
+} from './common/utils/constants'
 import App from './App'
 
 describe('App component', () => {

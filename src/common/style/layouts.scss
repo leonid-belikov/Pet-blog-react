@@ -51,10 +51,8 @@
       position: relative;
       z-index: 1;
       min-height: calc(100vh - $header-height - $footer-height);
-      //height: 200vh;
       display: flex;
       justify-content: center;
-      padding-bottom: 6rem;
 
       .container {
         width: 100vw;
@@ -125,6 +123,9 @@ html {
 
   &.mq-xs {
     .main-layout {
+      $header-height: 5rem;
+      $footer-height: 160px;
+
       .main-layout__header {
         padding: 0 15px;
         gap: 20px;
@@ -135,6 +136,8 @@ html {
       }
 
       .main-layout__content {
+        min-height: calc(100vh - $header-height - $footer-height);
+
         .container {
           padding: 0 15px;
         }

@@ -1,10 +1,10 @@
 import { renderApp } from '../../setup/test/renderApp'
 import { screen, within } from '@testing-library/react'
-import { ABOUT_PATH } from '../../router/routes'
+import { ABOUT_PATH } from '../../common/utils/constants'
 
 
 describe('About page component', () => {
-  it('should render the portrait, description, tech-stack, experience', () => {
+  it('should render the portrait, description, tech-stack, experience, timeline', () => {
     renderApp(ABOUT_PATH)
     const aboutPage = screen.getByTestId('about-page')
     expect(within(aboutPage).getByTestId('portrait')).toBeInTheDocument()

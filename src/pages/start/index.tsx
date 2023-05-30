@@ -1,10 +1,10 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { ABOUT_PATH, DEMO_MENU_PATH } from '../../router/routes'
 import styles from './style.module.scss'
 import LogoShort from '../../assets/brand/LogoShort'
 import GradientBorderButton from '../../common/components/gradient-border-button'
 import SocNetLinks from '../../common/components/soc-net-links'
+import { ABOUT_PATH, DEMO_MENU_PATH } from '../../common/utils/constants'
 
 function MainPage() {
   const classList = [

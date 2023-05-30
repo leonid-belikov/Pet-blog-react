@@ -1,6 +1,7 @@
 import { render } from '@testing-library/react'
 import { createMemoryRouter, RouterProvider } from 'react-router-dom'
-import routes, { DEFAULT_PATH } from '../../router/routes'
+import routes from '../../router/routes'
+import { DEFAULT_PATH } from '../../common/utils/constants'
 
 
 export const renderApp = (route: string | undefined = undefined) => {

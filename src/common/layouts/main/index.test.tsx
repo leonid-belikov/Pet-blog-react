@@ -1,6 +1,6 @@
 import { screen, within } from '@testing-library/react'
 import { renderApp } from '../../../setup/test/renderApp'
-import { ABOUT_PATH } from '../../../router/routes'
+import { ABOUT_PATH } from '../../utils/constants'
 
 describe('Main layout', () => {
   it('should render given component wrapped by header and footer', () => {

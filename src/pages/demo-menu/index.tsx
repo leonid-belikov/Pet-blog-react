@@ -1,9 +1,18 @@
 import React from 'react'
+import styles from './style.module.scss'
+import './adaptive.scss'
+import menuItems from '../../assets/demo-menu'
+import { NavLink } from 'react-router-dom'
+
 
 function DemoMenu() {
   return (
-    <div data-testid='demo-menu-page'>
-      <h1>demo-menu-page</h1>
+    <div data-testid='demo-menu-page' className={styles['demo-menu-page'] + ' demo-menu-page'}>
+      {menuItems.map(item => (
+        <NavLink key={item.title} className={styles['menu-item'] + ' menu-item ' + item.title} to={item.to || ''}>
+          <span>{ item.title }</span>
+        </NavLink>
+      ))}
     </div>
   )
 }
