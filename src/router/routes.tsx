@@ -16,6 +16,7 @@ import {
   TASK_MANAGER_PATH,
   TASKS_PATH, TOOLS_PATH
 } from '../common/utils/constants'
+import TaskManagerPage from '../pages/task-manager'
 
 
 export type RouteHandle = {
@@ -45,18 +46,19 @@ const routes: Array<RouteObject> = [
   {
     path: TASK_MANAGER_PATH,
     handle: { title: 'task manager' },
+    element: wrapped(<TaskManagerPage/>),
     children: [
       {
         path: TASKS_PATH,
-        element: wrapped(<TasksPage/>)
+        element: wrapped(<TasksPage/>, false)
       },
       {
         path: EMPLOYEES_PATH,
-        element: wrapped(<EmployeesPage/>)
+        element: wrapped(<EmployeesPage/>, false)
       },
       {
         path: TOOLS_PATH,
-        element: wrapped(<ToolsPage/>)
+        element: wrapped(<ToolsPage/>, false)
       },
     ]
   },

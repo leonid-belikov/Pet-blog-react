@@ -1,4 +1,42 @@
+@import './variables';
+
 .ant-tooltip .ant-tooltip-inner {
   line-height: 1.2 !important;
   min-height: auto !important;
+}
+
+.ant-tabs {
+  .ant-tabs-nav {
+    margin: 2rem 0;
+
+    .ant-tabs-nav-wrap {
+      justify-content: center;
+
+      .ant-tabs-nav-list {
+        .ant-tabs-tab {
+          &.ant-tabs-tab-active {
+            .ant-tabs-tab-btn {
+              color: $light-color;
+            }
+          }
+
+          .ant-tabs-tab-btn {
+            font-size: 1.2rem;
+
+            &:active {
+              color: $dark-color;
+            }
+          }
+        }
+
+        .ant-tabs-ink-bar {
+          background-color: $dark-color;
+        }
+      }
+    }
+
+    &:before {
+      display: none;
+    }
+  }
 }

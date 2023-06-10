@@ -6,7 +6,7 @@ import GradientBorderButton from '../../common/components/gradient-border-button
 import SocNetLinks from '../../common/components/soc-net-links'
 import { ABOUT_PATH, DEMO_MENU_PATH } from '../../common/utils/constants'
 
-function MainPage() {
+function StartPage() {
   const classList = [
     'page-container',
     'start-page',
@@ -43,4 +43,4 @@ function MainPage() {
   )
 }
 
-export default MainPage
+export default StartPage
