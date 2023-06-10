@@ -13,6 +13,17 @@ html {
     }
   }
 
+  &.mq-m {
+    .about-page {
+      .description {
+        span {
+          width: 340px;
+          line-height: 1;
+        }
+      }
+    }
+  }
+
   &.mq-s,
   &.mq-xs {
     .about-page {

@@ -1,4 +1,4 @@
-$bg-color:    #282f6f;
+$bg-color: #251526;
 $dark-color:  #525a9c;
 $dark-color-opacity: rgba(82, 90, 156, 0.5);
 $light-color: #e4e6ff;
@@ -8,9 +8,10 @@ $black-color: #000;
 $gray-color:  #bfc1d4;
 $white-color: #fff;
 
-$success-primary-color:       #52ff0e;
-$success-primary-hover-color: #F87D66;
-$success-secondary-color:     #f6ff12;
+$success-primary-color:         #52ff0e;
+$success-primary-hover-color: #be3987;
+$success-secondary-color:       #16ffea;
+$success-secondary-hover-color: #f6ff12;
 
 $danger-primary-color:   #a92a35;
 $danger-secondary-color: #d81122;
@@ -19,7 +20,7 @@ $danger-secondary-color: #d81122;
   background: linear-gradient(45deg, $success-primary-color, $success-secondary-color);
 
   &:hover {
-    background: linear-gradient(45deg, $success-primary-hover-color, $success-secondary-color);
+    background: linear-gradient(45deg, $success-primary-hover-color, $success-secondary-hover-color);
   }
 }
 

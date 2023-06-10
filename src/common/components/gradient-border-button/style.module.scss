@@ -7,10 +7,10 @@
   @include success-gradient-bg;
 
   button {
-    padding: 10px 20px;
-    width: 100%;
+    padding: 0.8rem 1.6rem;
     cursor: pointer;
     font-size: 1rem;
+    text-transform: uppercase;
 
     &.default-bg {
       background-color: $bg-color;

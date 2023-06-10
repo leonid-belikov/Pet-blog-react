@@ -44,9 +44,11 @@ function Timeline() {
           key={item.id}
           id={'timeline-step-' + item.id}
           className={getStepClassList(item)}>
-          <div className={styles['year']}>
-            {item.year}
-          </div>
+          {item.year && (
+            <div className={styles['year']}>
+              {item.year}
+            </div>
+          )}
           <div className={'info ' + styles['info']}>
             <div className={'skills ' + styles['skills']}>
               {item.commercial && (
@@ -60,7 +62,7 @@ function Timeline() {
                 ))}
               </div>
             </div>
-            <div className={styles['description']} dangerouslySetInnerHTML={{ __html: item.description }}/>
+            <div className={styles['description'] + ' description'} dangerouslySetInnerHTML={{ __html: item.description }}/>
           </div>
         </div>
       ))}
